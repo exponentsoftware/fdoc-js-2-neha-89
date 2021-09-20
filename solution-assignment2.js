@@ -15,16 +15,7 @@ const countries = [
     'KENYA'
   ]
   
-let resArray = [];
-createArrayOfArrays(countries);
-function createArrayOfArrays(countries) {
-    countries.map((item) => {
-        const start = item.split("").splice(0,3).join("");
-        const countrieslength = item.length;
-        return resArray.push([item + " " + start+" "+countrieslength]);
-      }
-    )}
-    console.log(resArray);
+
 
 //	Write a function which filter users who has  scoresGreaterThan85, 
 const users = [
@@ -71,36 +62,36 @@ const users = [
 		age:20
 	}
 	];
-  const scoresGreaterThan85 =(users) =>{
-  const result = users.filter ((item) => item.scores > 85)
-  console.log(result);
+  const scoresGreaterThan85 =(users) => {
+  const result = users.filter((item) => item.scores > 85)
+  return result;
 } 
-scoresGreaterThan85(users);
+console.log(scoresGreaterThan85(users));
 
 // const agesGreaterThan18 =(users) =>{
 //   const ages = users.filter ((item) => item.age > 18)
-//   console.log(ages);
+//   return ages;
 // }
-// agesGreaterThan18(users);
+// console.log(agesGreaterThan18(users));
 
-// const skillsOnlyHtm = (users) =>{
+// const havingOneSkillsOnly = (users) =>{ 
  
 //   const skill = users.filter((item) =>item.skills.length == 1 )
-//   console.log(skill);
+//   return skill;
 // }
-// skillsOnlyHtm(users);
+// console.log( havingOneSkillsOnly (users));
 
-// const nameBeganWith = (users) =>{
-//   const names = users.filter((item ) => item.name.charAt(0) == 'M')
-//   console.log(names);
+// const nameBeganWithM = (users) =>{
+//   const names = users.filter((item ) => item.name.charAt(0) === 'M') 
+//   return names;
 // }
-// nameBeganWith(users);
+// console.log(nameBeganWithM(users));
 
 //Write a function which addUser  to the user array only if the user does not exist.
 
 const addUser = (user) =>{
-  const index= users.findIndex(x => x.name == user.name)
-  if(index === -1){
+  const index = users.findIndex(x => x.name == user.name)
+  if(index === -1){  // array.find()
     users.push(user);
   }
   else{
@@ -112,4 +103,5 @@ addUser(user);
 console.log(users);
 
 //Write a function which editUser if the user exist in the users array. 
-
+//if the user exist
+//edit user
